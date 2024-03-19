@@ -1,0 +1,64 @@
+﻿  token_util.cpp
+C:\DotNetProjects\TucanScript\TucanScript\token_util.cpp(111,23): error C2440: <function-style-cast>: невозможно преобразовать "bool" в "tucan_script::tucan_entity"
+C:\DotNetProjects\TucanScript\TucanScript\token_util.cpp(111,23): message : "tucan_script::tucan_entity::tucan_entity": ни одна перегруженная функция не может преобразовать все типы аргументов
+C:\DotNetProjects\TucanScript\TucanScript\tucan_entity.h(75,2): message : может быть "tucan_script::tucan_entity::tucan_entity(tucan_script::tucan_entity &&)"
+C:\DotNetProjects\TucanScript\TucanScript\token_util.cpp(111,23): message : "tucan_script::tucan_entity::tucan_entity(tucan_script::tucan_entity &&)": невозможно преобразовать аргумент 1 из "bool" в "tucan_script::tucan_entity &&"
+C:\DotNetProjects\TucanScript\TucanScript\token_util.cpp(111,24): message : Причина: невозможно преобразовать "bool" в "tucan_script::tucan_entity"
+C:\DotNetProjects\TucanScript\TucanScript\tucan_entity.h(75,2): message : или       "tucan_script::tucan_entity::tucan_entity(const tucan_script::tucan_entity &)"
+C:\DotNetProjects\TucanScript\TucanScript\token_util.cpp(111,23): message : "tucan_script::tucan_entity::tucan_entity(const tucan_script::tucan_entity &)": невозможно преобразовать аргумент 1 из "bool" в "const tucan_script::tucan_entity &"
+C:\DotNetProjects\TucanScript\TucanScript\token_util.cpp(111,24): message : Причина: невозможно преобразовать "bool" в "const tucan_script::tucan_entity"
+C:\DotNetProjects\TucanScript\TucanScript\tucan_entity.h(69,3): message : или       "tucan_script::tucan_entity::tucan_entity(const tucan_script::TUCAN_TYPE &)"
+C:\DotNetProjects\TucanScript\TucanScript\token_util.cpp(111,23): message : "tucan_script::tucan_entity::tucan_entity(const tucan_script::TUCAN_TYPE &)": невозможно преобразовать аргумент 1 из "bool" в "const tucan_script::TUCAN_TYPE &"
+C:\DotNetProjects\TucanScript\TucanScript\token_util.cpp(111,24): message : Причина: невозможно преобразовать "bool" в "const tucan_script::TUCAN_TYPE"
+C:\DotNetProjects\TucanScript\TucanScript\token_util.cpp(111,24): message : Для преобразования в перечисляемый тип требуется явное приведение (static_cast, приведение в стиле С или приведение в стиле функции в круглых скобках)
+C:\DotNetProjects\TucanScript\TucanScript\token_util.cpp(111,23): message : при попытке сопоставить список аргументов "(bool)"
+C:\DotNetProjects\TucanScript\TucanScript\token_util.cpp(114,23): error C2440: <function-style-cast>: невозможно преобразовать "__int64" в "tucan_script::tucan_entity"
+C:\DotNetProjects\TucanScript\TucanScript\token_util.cpp(114,23): message : "tucan_script::tucan_entity::tucan_entity": ни одна перегруженная функция не может преобразовать все типы аргументов
+C:\DotNetProjects\TucanScript\TucanScript\tucan_entity.h(75,2): message : может быть "tucan_script::tucan_entity::tucan_entity(tucan_script::tucan_entity &&)"
+C:\DotNetProjects\TucanScript\TucanScript\token_util.cpp(114,23): message : "tucan_script::tucan_entity::tucan_entity(tucan_script::tucan_entity &&)": невозможно преобразовать аргумент 1 из "__int64" в "tucan_script::tucan_entity &&"
+C:\DotNetProjects\TucanScript\TucanScript\token_util.cpp(114,24): message : Причина: невозможно преобразовать "__int64" в "tucan_script::tucan_entity"
+C:\DotNetProjects\TucanScript\TucanScript\tucan_entity.h(75,2): message : или       "tucan_script::tucan_entity::tucan_entity(const tucan_script::tucan_entity &)"
+C:\DotNetProjects\TucanScript\TucanScript\token_util.cpp(114,23): message : "tucan_script::tucan_entity::tucan_entity(const tucan_script::tucan_entity &)": невозможно преобразовать аргумент 1 из "__int64" в "const tucan_script::tucan_entity &"
+C:\DotNetProjects\TucanScript\TucanScript\token_util.cpp(114,24): message : Причина: невозможно преобразовать "__int64" в "const tucan_script::tucan_entity"
+C:\DotNetProjects\TucanScript\TucanScript\tucan_entity.h(69,3): message : или       "tucan_script::tucan_entity::tucan_entity(const tucan_script::TUCAN_TYPE &)"
+C:\DotNetProjects\TucanScript\TucanScript\token_util.cpp(114,23): message : "tucan_script::tucan_entity::tucan_entity(const tucan_script::TUCAN_TYPE &)": невозможно преобразовать аргумент 1 из "__int64" в "const tucan_script::TUCAN_TYPE &"
+C:\DotNetProjects\TucanScript\TucanScript\token_util.cpp(114,24): message : Причина: невозможно преобразовать "__int64" в "const tucan_script::TUCAN_TYPE"
+C:\DotNetProjects\TucanScript\TucanScript\token_util.cpp(114,24): message : Для преобразования в перечисляемый тип требуется явное приведение (static_cast, приведение в стиле С или приведение в стиле функции в круглых скобках)
+C:\DotNetProjects\TucanScript\TucanScript\token_util.cpp(114,23): message : при попытке сопоставить список аргументов "(__int64)"
+C:\DotNetProjects\TucanScript\TucanScript\token_util.cpp(117,23): error C2440: <function-style-cast>: невозможно преобразовать "double" в "tucan_script::tucan_entity"
+C:\DotNetProjects\TucanScript\TucanScript\token_util.cpp(117,23): message : "tucan_script::tucan_entity::tucan_entity": ни одна перегруженная функция не может преобразовать все типы аргументов
+C:\DotNetProjects\TucanScript\TucanScript\tucan_entity.h(75,2): message : может быть "tucan_script::tucan_entity::tucan_entity(tucan_script::tucan_entity &&)"
+C:\DotNetProjects\TucanScript\TucanScript\token_util.cpp(117,23): message : "tucan_script::tucan_entity::tucan_entity(tucan_script::tucan_entity &&)": невозможно преобразовать аргумент 1 из "double" в "tucan_script::tucan_entity &&"
+C:\DotNetProjects\TucanScript\TucanScript\token_util.cpp(117,24): message : Причина: невозможно преобразовать "double" в "tucan_script::tucan_entity"
+C:\DotNetProjects\TucanScript\TucanScript\tucan_entity.h(75,2): message : или       "tucan_script::tucan_entity::tucan_entity(const tucan_script::tucan_entity &)"
+C:\DotNetProjects\TucanScript\TucanScript\token_util.cpp(117,23): message : "tucan_script::tucan_entity::tucan_entity(const tucan_script::tucan_entity &)": невозможно преобразовать аргумент 1 из "double" в "const tucan_script::tucan_entity &"
+C:\DotNetProjects\TucanScript\TucanScript\token_util.cpp(117,24): message : Причина: невозможно преобразовать "double" в "const tucan_script::tucan_entity"
+C:\DotNetProjects\TucanScript\TucanScript\tucan_entity.h(69,3): message : или       "tucan_script::tucan_entity::tucan_entity(const tucan_script::TUCAN_TYPE &)"
+C:\DotNetProjects\TucanScript\TucanScript\token_util.cpp(117,23): message : "tucan_script::tucan_entity::tucan_entity(const tucan_script::TUCAN_TYPE &)": невозможно преобразовать аргумент 1 из "double" в "const tucan_script::TUCAN_TYPE &"
+C:\DotNetProjects\TucanScript\TucanScript\token_util.cpp(117,24): message : Причина: невозможно преобразовать "double" в "const tucan_script::TUCAN_TYPE"
+C:\DotNetProjects\TucanScript\TucanScript\token_util.cpp(117,24): message : Для этого преобразования требуется явное приведение (static_cast, приведение в стиле С или приведение в стиле функции в круглых скобках)
+C:\DotNetProjects\TucanScript\TucanScript\token_util.cpp(117,23): message : при попытке сопоставить список аргументов "(double)"
+C:\DotNetProjects\TucanScript\TucanScript\token_util.cpp(120,24): error C2065: tokenMap: необъявленный идентификатор
+C:\DotNetProjects\TucanScript\TucanScript\token_util.cpp(120,33): error C2065: tokenStr: необъявленный идентификатор
+C:\DotNetProjects\TucanScript\TucanScript\token_util.cpp(110,3): warning C4390: ";": обнаружен пустой контролируемый оператор; это правильно?
+C:\DotNetProjects\TucanScript\TucanScript\token_util.cpp(113,3): warning C4390: ";": обнаружен пустой контролируемый оператор; это правильно?
+C:\DotNetProjects\TucanScript\TucanScript\token_util.cpp(116,3): warning C4390: ";": обнаружен пустой контролируемый оператор; это правильно?
+  tucan_entity.cpp
+  tucan_operable.cpp
+C:\DotNetProjects\TucanScript\TucanScript\tucan_operable.cpp(201,21): error C2296: "%": недопустимо, поскольку тип левого операнда — "double"
+C:\DotNetProjects\TucanScript\TucanScript\tucan_operable.cpp(212,4): message : выполняется компиляция ссылки на экземпляр шаблон функции "void tucan_script::tucan_operable::rem<double>(_T0)"
+          with
+          [
+              _T0=double
+          ]
+C:\DotNetProjects\TucanScript\TucanScript\tucan_operable.cpp(201,21): error C2297: "%": недопустимо, поскольку тип правого операнда — "_T0"
+          with
+          [
+              _T0=double
+          ]
+C:\DotNetProjects\TucanScript\TucanScript\tucan_operable.cpp(205,15): error C2297: "%": недопустимо, поскольку тип правого операнда — "_T0"
+          with
+          [
+              _T0=double
+          ]
+  Создание кода...
