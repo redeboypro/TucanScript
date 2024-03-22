@@ -60,16 +60,6 @@ namespace tucan_script
 		CONTINUE = 40
 	};
 
-	class tucan_undefined : public tucan_entity
-	{
-	private:
-		std::string m_content;
-
-	public:
-		tucan_undefined(std::string content);
-		~tucan_undefined();
-	};
-
 	class tucan_resetable
 	{
 	public:
@@ -89,5 +79,15 @@ namespace tucan_script
 
 	protected:
 		void setType(const TUCAN_TYPE& type);
+	};
+
+	class tucan_undefined : public tucan_entity
+	{
+	private:
+		std::string m_content;
+
+	public:
+		tucan_undefined(const std::string& content);
+		~tucan_undefined();
 	};
 }

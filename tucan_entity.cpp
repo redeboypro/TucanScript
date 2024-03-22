@@ -17,7 +17,7 @@ namespace tucan_script
 		m_type = type;
 	}
 
-	tucan_undefined::tucan_undefined(std::string content) : m_content(content) {}
+	tucan_undefined::tucan_undefined(const std::string& content) : m_content(content) {}
 
 	tucan_undefined::~tucan_undefined()
 	{

@@ -1,4 +1,6 @@
 C:\DotNetProjects\TucanScript\TucanScript\dllmain.cpp;C:\DotNetProjects\TucanScript\TucanScript\x64\Debug\dllmain.obj
 C:\DotNetProjects\TucanScript\TucanScript\pch.cpp;C:\DotNetProjects\TucanScript\TucanScript\x64\Debug\pch.obj
+C:\DotNetProjects\TucanScript\TucanScript\token_util.cpp;C:\DotNetProjects\TucanScript\TucanScript\x64\Debug\token_util.obj
+C:\DotNetProjects\TucanScript\TucanScript\tucan_const.cpp;C:\DotNetProjects\TucanScript\TucanScript\x64\Debug\tucan_const.obj
 C:\DotNetProjects\TucanScript\TucanScript\tucan_entity.cpp;C:\DotNetProjects\TucanScript\TucanScript\x64\Debug\tucan_entity.obj
 C:\DotNetProjects\TucanScript\TucanScript\tucan_operable.cpp;C:\DotNetProjects\TucanScript\TucanScript\x64\Debug\tucan_operable.obj

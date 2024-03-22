@@ -8,7 +8,7 @@
 namespace tucan_script 
 {
 	template <typename T>
-	concept numeric = std::integral<T> || std::floating_point<T>;
+	concept is_numeric = std::is_same_v<T, long long> || std::is_same_v<T, double>;
 
 	class tucan_operable : public tucan_entity
 	{
@@ -44,19 +44,19 @@ namespace tucan_script
 		void set(const tucan_operable& rValue);
 
 		void add(const std::string& rValue);
-		void add(numeric auto rValue);
+		void add(is_numeric auto rValue);
 		void add(const tucan_operable& rValue);
 
-		void sub(numeric auto rValue);
+		void sub(is_numeric auto rValue);
 		void sub(const tucan_operable& rValue);
 
-		void mul(numeric auto rValue);
+		void mul(is_numeric auto rValue);
 		void mul(const tucan_operable& rValue);
 
-		void div(numeric auto rValue);
+		void div(is_numeric auto rValue);
 		void div(const tucan_operable& rValue);
 
-		void rem(numeric auto rValue);
+		void rem(is_numeric auto rValue);
 		void rem(const tucan_operable& rValue);
 
 		void equal(const std::string& rValue);
@@ -65,16 +65,16 @@ namespace tucan_script
 		void equal(bool rValue);
 		void equal(const tucan_operable& rValue);
 
-		void greater(numeric auto rValue);
+		void greater(is_numeric auto rValue);
 		void greater(const tucan_operable& rValue);
 
-		void less(numeric auto rValue);
+		void less(is_numeric auto rValue);
 		void less(const tucan_operable& rValue);
 
-		void gEqual(numeric auto rValue);
+		void gEqual(is_numeric auto rValue);
 		void gEqual(const tucan_operable& rValue);
 
-		void lEqual(numeric auto rValue);
+		void lEqual(is_numeric auto rValue);
 		void lEqual(const tucan_operable& rValue);
 
 		void conjunction(bool rValue);

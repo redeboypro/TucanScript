@@ -4,11 +4,10 @@
 
 namespace tucan_script
 {
-    const char SPACE_CHAR = ' ';
     const char QUOTE_CHAR = '"';
     const char SHARP_CHAR = '#';
 
-    const std::unordered_map<char, TUCAN_TYPE> single_token_map =
+    static std::unordered_map<char, TUCAN_TYPE> single_token_map =
     {
         { '=', TUCAN_TYPE::EQUAL },
         { '*', TUCAN_TYPE::MUL },
@@ -27,7 +26,7 @@ namespace tucan_script
         { '&', TUCAN_TYPE::REF }
     };
 
-    const std::unordered_map<std::string, TUCAN_TYPE> reserved_token_map =
+    static std::unordered_map<std::string, TUCAN_TYPE> reserved_token_map =
     {
         { "and", TUCAN_TYPE::AND },
         { "or", TUCAN_TYPE::AND },
@@ -51,6 +50,9 @@ namespace tucan_script
     static std::vector<tucan_entity> tokenize(const std::string& src);
 
     static tucan_entity parseToken(const std::string& src);
+
+    template<typename T>
+    static bool h_tryGetValue(const std::unordered_map<T, TUCAN_TYPE>& map, const T& src, TUCAN_TYPE& type);
 
     static bool h_tryParseBool(const std::string& str, bool& value);
 }

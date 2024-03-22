@@ -102,7 +102,7 @@ namespace tucan_script
 		set(toString().append(rValue));
 	}
 
-	void tucan_operable::add(numeric auto rValue)
+	void tucan_operable::add(is_numeric auto rValue)
 	{
 		if (isFloat())
 		{
@@ -133,7 +133,7 @@ namespace tucan_script
 			}
 	}
 
-	void tucan_operable::sub(numeric auto rValue)
+	void tucan_operable::sub(is_numeric auto rValue)
 	{
 		if (isFloat())
 		{
@@ -155,7 +155,7 @@ namespace tucan_script
 		sub(rValue.toInt());
 	}
 
-	void tucan_operable::mul(numeric auto rValue)
+	void tucan_operable::mul(is_numeric auto rValue)
 	{
 		if (isFloat())
 		{
@@ -177,7 +177,7 @@ namespace tucan_script
 		mul(rValue.toInt());
 	}
 
-	void tucan_operable::div(numeric auto rValue)
+	void tucan_operable::div(is_numeric auto rValue)
 	{
 		if (isFloat())
 		{
@@ -199,15 +199,14 @@ namespace tucan_script
 		div(rValue.toInt());
 	}
 
-	void tucan_operable::rem(numeric auto rValue)
+	void tucan_operable::rem(is_numeric auto rValue)
 	{
-		if (isFloat()) 
-		{
-			set(m_floatValue % rValue);
-			return;
-		}
-
-		set(toInt() % rValue);
+		if (isFloat())
+			set(std::fmod(m_floatValue, rValue));
+		else if constexpr (std::is_same_v<decltype(rValue), long long>)
+			set(toInt() % static_cast<long long>(rValue));
+		else 
+			set(std::fmod(toInt(), rValue));
 	}
 
 	void tucan_operable::rem(const tucan_operable& rValue)
@@ -260,7 +259,7 @@ namespace tucan_script
 		}
 	}
 
-	void tucan_operable::greater(numeric auto rValue)
+	void tucan_operable::greater(is_numeric auto rValue)
 	{
 		if (isFloat())
 		{
@@ -282,7 +281,7 @@ namespace tucan_script
 		greater(rValue.toInt());
 	}
 
-	void tucan_operable::less(numeric auto rValue)
+	void tucan_operable::less(is_numeric auto rValue)
 	{
 		if (isFloat()) 
 		{
@@ -304,7 +303,7 @@ namespace tucan_script
 		less(rValue.toInt());
 	}
 
-	void tucan_operable::gEqual(numeric auto rValue)
+	void tucan_operable::gEqual(is_numeric auto rValue)
 	{
 		if (isFloat())
 		{
@@ -326,7 +325,7 @@ namespace tucan_script
 		gEqual(rValue.toInt());
 	}
 
-	void tucan_operable::lEqual(numeric auto rValue)
+	void tucan_operable::lEqual(is_numeric auto rValue)
 	{
 		if (isFloat())
 		{

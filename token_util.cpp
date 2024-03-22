@@ -10,28 +10,12 @@ namespace tucan_script
 
 	bool isSingleCharToken(char src, TUCAN_TYPE& type)
 	{
-		auto it = single_token_map.find(src);
-		if (it != single_token_map.end())
-		{
-			type = it->second;
-			return true;
-		}
-
-		type = TUCAN_TYPE::NONE;
-		return false;
+		return h_tryGetValue<char>(single_token_map, src, type);
 	}
 
 	bool isReservedToken(const std::string& src, TUCAN_TYPE& type)
 	{
-		auto it = reserved_token_map.find(src);
-		if (it != reserved_token_map.end())
-		{
-			type = it->second;
-			return true;
-		}
-
-		type = TUCAN_TYPE::NONE;
-		return false;
+		return h_tryGetValue<std::string>(reserved_token_map, src, type);
 	}
 
 	std::vector<tucan_entity> tokenize(const std::string& src)
@@ -43,19 +27,17 @@ namespace tucan_script
 
 		for (size_t i = 0; i < src.size(); i++) 
 		{
-			char tokenChar = src[++i];
+			char tokenChar = src[i];
 
 			if (tokenChar == SHARP_CHAR)
 			{
-				tokenChar = src[++i];
-
 				while (tokenChar != '\n' && tokenChar != '\r')
 					tokenChar = src[++i];
 
 				continue;
 			}
 
-			if (tokenChar == SPACE_CHAR) 
+			if (std::isspace(tokenChar))
 			{
 				if (tokenString.size() > 0)
 					tokenList.push_back(parseToken(tokenString));
@@ -111,8 +93,6 @@ namespace tucan_script
 			}
 		}
 
-
-
 		return tokenList;
 	}
 
@@ -150,5 +130,18 @@ namespace tucan_script
 			return false;
 
 		return true;
+	}
+
+	template<typename T>
+	bool h_tryGetValue(const std::unordered_map<T, TUCAN_TYPE>& map, const T& src, TUCAN_TYPE& type) 
+	{
+		auto it = map.find(src);
+		if (it != map.end()) {
+			type = it->second;
+			return true;
+		}
+
+		type = TUCAN_TYPE::NONE;
+		return false;
 	}
 }
